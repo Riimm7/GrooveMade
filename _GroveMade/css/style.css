@@ -97,6 +97,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -277,9 +278,18 @@ textarea:focus {
 
 .input {
   border-radius: 0 !important;
-  width: 100%;
+  width: 320px;
+  height: 40px;
   display: block;
-  padding: 0px 20px;
+  padding: 0px 20px 0px 0px;
+  font-size: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.input._focus {
+  border: 0;
+  -webkit-box-shadow: 5px -5px 20px -1px rgba(160, 160, 160, 0.5) inset;
+          box-shadow: 5px -5px 20px -1px rgba(160, 160, 160, 0.5) inset;
 }
 
 textarea.input {
@@ -921,7 +931,6 @@ body.ie ._ibg img {
 
 .header__container {
   padding: 0px 42.5px 0 12.5px;
-  max-width: 1365px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -965,6 +974,127 @@ body.ie ._ibg img {
 
 .icon-menu {
   display: none;
+}
+
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__bottom {
+  padding: 80px 0px 28px 0px;
+}
+
+.top-footer__column {
+  padding: 80px 0px 0px 0px;
+}
+
+.top-footer__menu {
+  padding: 0px 10px 0px 0px;
+}
+
+.top-footer__subscribe {
+  margin: 0px 0px 0px 12.5px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.footer-menu__item:not(:last-child) {
+  margin: 0px 0px 16px 0px;
+}
+
+.footer-menu__link {
+  font-size: 22px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.footer-menu__link:hover {
+  color: #A0A0A0;
+}
+
+.subscribe-footer__title {
+  font-size: 22px;
+  line-height: 24px;
+  margin: 0px 0px 23px 0px;
+}
+
+.subscribe-footer__text {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  color: #A0A0A0;
+  max-width: 350px;
+  margin: 0px 0px 60px 0px;
+}
+
+.up-footer {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 22px 0px 0px 0px;
+  width: 82px;
+  height: 82px;
+  background-color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 15px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.up-footer span {
+  font-size: 16px;
+}
+
+.up-footer__text {
+  color: #fff;
+}
+
+.up-footer::before {
+  content: "";
+  visibility: hidden;
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  top: 10px;
+  left: 22px;
+  background: url(../img/icons/p-left.svg) no-repeat;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.up-footer:hover {
+  padding: 35px 0px 0px 0px;
+}
+
+.up-footer:hover::before {
+  visibility: visible;
+}
+
+.bottom-footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer-list__item {
+  color: #A0A0A0;
+  font-size: 13px;
+}
+
+.footer-list__item:not(:last-child) {
+  margin: 0px 28px 0px 0px;
+}
+
+.footer-list_black {
+  color: #000;
 }
 
 .page {
@@ -1015,9 +1145,33 @@ body.ie ._ibg img {
     max-width: none;
     padding: 0 10px;
   }
+
+  .up-footer {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-menu__item {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .footer-menu__link {
+    font-size: 16px;
+    line-height: auto;
+  }
+
+  .subscribe-footer__text {
+    margin: 0px 0px 10px 0px;
+  }
 }
 
 @media (max-width: 479.98px) {
+  .input {
+    height: 25px;
+    font-size: 15px;
+  }
+
   .header__container {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -1033,7 +1187,7 @@ body.ie ._ibg img {
     top: 0;
     left: 0;
     overflow: auto;
-    background-color: #019FD7;
+    background-color: #C6C6C6;
     padding: 50px 40px;
     text-align: center;
     font-size: 16px;
@@ -1112,5 +1266,47 @@ body.ie ._ibg img {
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
     bottom: calc(50% - 1px);
+  }
+
+  .footer__bottom {
+    padding: 30px 0px 10px 0px;
+  }
+
+  .top-footer__menu {
+    padding: 10px 0px 0px 0px;
+  }
+
+  .top-footer__subscribe {
+    margin: 0;
+  }
+
+  .subscribe-footer__title {
+    font-size: 18px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .subscribe-footer__text {
+    font-size: 12px;
+    line-height: 13px;
+  }
+
+  .footer-list {
+    font-size: 10px;
+  }
+
+  .footer-list__item {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 479px) {
+  .footer-menu__item:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 340px) {
+  .input {
+    width: 100%;
   }
 }
