@@ -2,38 +2,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:regular);
 
-@font-face {
-  font-family: "Gilroy-Bold";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Gilroy-Medium";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Gilroy-SemiBold";
-  font-display: swap;
-  src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Gilroy-Regular";
-  font-display: swap;
-  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
 * {
   padding: 0px;
   margin: 0px;
@@ -951,6 +919,10 @@ body.ie ._ibg img {
   letter-spacing: 1.4px;
 }
 
+.header__card:hover {
+  color: #A0A0A0;
+}
+
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -970,6 +942,10 @@ body.ie ._ibg img {
 
 .menu__link {
   color: inherit;
+}
+
+.menu__link:hover {
+  color: #A0A0A0;
 }
 
 .icon-menu {
@@ -1097,6 +1073,130 @@ body.ie ._ibg img {
   color: #000;
 }
 
+.main {
+  height: 35vw;
+}
+
+.main__bg {
+  z-index: -1;
+}
+
+.main__content {
+  text-align: center;
+  padding: 13.4vw 0px 0px 0px;
+  color: #fff;
+}
+
+.main__title {
+  font-size: 43px;
+  line-height: 107%;
+  margin: 0px 0px 12px 0px;
+}
+
+.main__subtitle {
+  margin: 0px 0px 28px 0px;
+  font-size: 15px;
+}
+
+.main__more {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.main__more:hover {
+  color: #A0A0A0;
+}
+
+.inspire {
+  padding-top: 80px;
+}
+
+.inspire__text {
+  text-align: center;
+}
+
+.inspire__title {
+  font-size: 43px;
+  line-height: 134.8837209302%;
+  margin: 0px 0px 1.1979166667vw 0px;
+}
+
+.inspire__subtitle {
+  line-height: 171.4285714286%;
+  letter-spacing: 0.8;
+  color: #A0A0A0;
+  margin: 0px 0px 1.3541666667vw 0px;
+}
+
+.inspire__get {
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 161.5384615385%;
+}
+
+.inspire__get:hover {
+  color: #A0A0A0;
+}
+
+.inspire__content {
+  padding-top: calc(20px + 61 * ((100vw - 320px) / 1600));
+}
+
+.content-inspire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.3020833333vw;
+}
+
+.content-inspire__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  text-align: center;
+  position: relative;
+}
+
+.content-inspire__column img {
+  width: 100%;
+}
+
+.content-inspire__img {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.content-inspire__img-bg {
+  display: inline-block;
+}
+
+.content-inspire__img-bg:hover {
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.content-inspire__title {
+  padding-top: 49px;
+  margin: 0px 0px 1.1979166667vw 0px;
+  font-size: 27px;
+  line-height: 111.1111111111%;
+  z-index: 2;
+}
+
+.content-inspire__more {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1.4px;
+}
+
+.content-inspire__more:hover {
+  color: #A0A0A0;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -1126,6 +1226,28 @@ body.ie ._ibg img {
   }
 }
 
+@media (max-width: 1340px) {
+  .main__title {
+    font-size: calc(25px + 18 * ((100vw - 320px) / 1020));
+  }
+
+  .inspire {
+    padding-top: calc(20px + 60 * ((100vw - 320px) / 1020));
+  }
+
+  .inspire__title {
+    font-size: calc(25px + 18 * ((100vw - 320px) / 1020));
+  }
+
+  .content-inspire__title {
+    padding-top: calc(10px + 39 * ((100vw - 320px) / 1020));
+  }
+
+  .content-inspire__title {
+    font-size: calc(16px + 11 * ((100vw - 320px) / 1020));
+  }
+}
+
 @media (max-width: 991.98px) {
   ._container {
     max-width: 750px;
@@ -1148,6 +1270,10 @@ body.ie ._ibg img {
 
   .up-footer {
     display: none;
+  }
+
+  .main {
+    height: 40vw;
   }
 }
 
@@ -1172,6 +1298,13 @@ body.ie ._ibg img {
     font-size: 15px;
   }
 
+  .header {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    z-index: 5;
+  }
+
   .header__container {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -1187,7 +1320,7 @@ body.ie ._ibg img {
     top: 0;
     left: 0;
     overflow: auto;
-    background-color: #C6C6C6;
+    background-color: #5E90B0;
     padding: 50px 40px;
     text-align: center;
     font-size: 16px;
@@ -1195,6 +1328,7 @@ body.ie ._ibg img {
 
   .menu__body._active {
     display: block;
+    z-index: 1;
   }
 
   .menu__list {
@@ -1297,11 +1431,68 @@ body.ie ._ibg img {
   .footer-list__item {
     font-size: 10px;
   }
+
+  main {
+    padding: 63px 0px 0px 0px;
+  }
+
+  .main {
+    height: 45vw;
+  }
+
+  .content-inspire {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .content-inspire__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 63.75vw;
+    color: #fff;
+  }
+
+  .content-inspire__img-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: -1;
+  }
+
+  .content-inspire__title {
+    padding: 0;
+    font-size: 25px;
+  }
+
+  .content-inspire__more {
+    display: inline-block;
+    color: #fff;
+  }
 }
 
 @media (max-width: 479px) {
   .footer-menu__item:first-child {
     display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .main__subtitle {
+    margin: 0px 0px 18px 0px;
   }
 }
 
