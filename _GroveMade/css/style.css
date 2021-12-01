@@ -701,7 +701,7 @@ body.ie ._ibg img {
 }
 
 #map {
-  background: url("../img/icons/loading.gif") center/50px no-repeat;
+  background: url("..img/icons/loading.gif") center/50px no-repeat;
 }
 
 ._swiper {
@@ -781,6 +781,66 @@ body.ie ._ibg img {
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.slider {
+  padding-left: calc(0px + 60 * ((100vw - 320px) / 1120));
+  margin: 0px 0px 6.9444444444vw 0px;
+}
+
+.slider__top {
+  padding-top: calc(20px + 100 * ((100vw - 320px) / 1120));
+  text-align: center;
+}
+
+.slider__title {
+  font-size: 33px;
+  line-height: 109.0909090909%;
+  margin-bottom: 16px;
+}
+
+.slider__subtitle {
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  color: #A0A0A0;
+  margin: 0px 0px 2.7777777778vw 0px;
+}
+
+.slider__pagging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 21px;
+  margin: 0px 0px 19px 0px;
+}
+
+.swiper-pagination-bullet:nth-child(even) {
+  height: 7px;
+  width: 7px;
+  background-color: #000;
+  margin: 0 8px;
+}
+
+.slide__bottom {
+  color: #A0A0A0;
+  letter-spacing: 0.7px;
+}
+
+.slide__title {
+  font-size: 13px;
+  line-height: 161.5384615385%;
+  padding-top: calc(10px + 12 * ((100vw - 320px) / 1120));
+}
+
+.slide__price {
+  font-size: 12px;
+  line-height: 175%;
 }
 
 .popup {
@@ -977,7 +1037,7 @@ body.ie ._ibg img {
           flex: 1 1 auto;
 }
 
-.footer-menu__item:not(:last-child) {
+.footer-menu__item {
   margin: 0px 0px 16px 0px;
 }
 
@@ -1118,14 +1178,14 @@ body.ie ._ibg img {
 .inspire__title {
   font-size: 43px;
   line-height: 134.8837209302%;
-  margin: 0px 0px 1.1979166667vw 0px;
+  margin: 0px 0px 1.5972222222vw 0px;
 }
 
 .inspire__subtitle {
   line-height: 171.4285714286%;
   letter-spacing: 0.8;
   color: #A0A0A0;
-  margin: 0px 0px 1.3541666667vw 0px;
+  margin: 0px 0px 1.8055555556vw 0px;
 }
 
 .inspire__get {
@@ -1139,14 +1199,14 @@ body.ie ._ibg img {
 }
 
 .inspire__content {
-  padding-top: calc(20px + 61 * ((100vw - 320px) / 1600));
+  padding-top: calc(20px + 61 * ((100vw - 320px) / 1120));
 }
 
 .content-inspire {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.3020833333vw;
+  gap: 1.7361111111vw;
 }
 
 .content-inspire__column {
@@ -1181,7 +1241,7 @@ body.ie ._ibg img {
 
 .content-inspire__title {
   padding-top: 49px;
-  margin: 0px 0px 1.1979166667vw 0px;
+  margin: 0px 0px 1.5972222222vw 0px;
   font-size: 27px;
   line-height: 111.1111111111%;
   z-index: 2;
@@ -1227,6 +1287,14 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 1340px) {
+  .slider__title {
+    font-size: calc(18px + 15 * ((100vw - 320px) / 1020));
+  }
+
+  .slider__title {
+    margin-bottom: calc(7px + 9 * ((100vw - 320px) / 1020));
+  }
+
   .main__title {
     font-size: calc(25px + 18 * ((100vw - 320px) / 1020));
   }
@@ -1268,8 +1336,44 @@ body.ie ._ibg img {
     padding: 0 10px;
   }
 
+  .swiper-container-initialized .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .footer__top {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .footer__bottom {
+    padding: 50px 0px 15px 0px;
+  }
+
+  .top-footer__column {
+    padding: 40px 0px 0px 0px;
+  }
+
   .up-footer {
     display: none;
+  }
+
+  .bottom-footer__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .main {
@@ -1279,7 +1383,7 @@ body.ie ._ibg img {
 
 @media (max-width: 550px) {
   .footer-menu__item {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 8px 0px;
   }
 
   .footer-menu__link {
